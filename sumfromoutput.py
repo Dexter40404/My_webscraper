@@ -8,7 +8,7 @@ def count():
                 x = num.strip()
                 output.append(x)
 
-
-    total = "Total is: " + str(sum(int(num)for num in output)) + '.'
-    print(total)
+    total = "Total is: " + str(sum(int(num) for num in output))
+    with open("total.txt", "a", encoding='utf-8') as totalout:
+        print(total, file=totalout)
 
